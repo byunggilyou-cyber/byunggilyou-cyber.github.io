@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flare Dive | 오키나와 케라마 펀다이빙 · 소인원 가이드</title>
+<meta name="description" content="오키나와 케라마 펀다이빙 전문 Dive&Travel Flare. 가이드 1명당 최대 4명 소인원, 수중 사진 포함. 2009년부터 PADI 다이브 프로로 활동한 가이드가 직접 안내합니다.">
+<meta property="og:title" content="Flare Dive | 오키나와 케라마 펀다이빙">
+<meta property="og:description" content="가이드 1명당 최대 4명 소인원, 수중 사진 포함. 손님 레벨에 맞춘 보트·포인트 선택.">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --ink: #0d2b36;
+    --deep: #0b3a4a;
+    --sea: #1f7f95;
+    --brand: #73c2ce;
+    --foam: #eaf6f8;
+    --sand: #f7f3ec;
+    --muted: #5b7480;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    color: var(--ink);
+    line-height: 1.7;
+    background: #fff;
+    word-break: keep-all;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+  /* Header */
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #e3eef1;
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .logo { font-weight: 800; font-size: 20px; letter-spacing: 0.02em; text-decoration: none; color: var(--deep); }
+  .logo span { color: var(--sea); }
+  .nav ul { display: flex; gap: 22px; list-style: none; }
+  .nav ul a { text-decoration: none; font-size: 15px; color: var(--muted); }
+  .nav ul a:hover { color: var(--sea); }
+  .nav .cta-sm {
+    background: var(--sea); color: #fff; text-decoration: none;
+    padding: 8px 16px; border-radius: 999px; font-size: 14px; font-weight: 600;
+  }
+
+  /* Hero */
+  .hero {
+    position: relative; overflow: hidden; color: #fff;
+    background: linear-gradient(180deg, #2a9cb3 0%, #11647a 45%, #08334a 100%);
+    padding: 110px 0 150px;
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 20% 10%, rgba(255,255,255,0.22), transparent 70%),
+      radial-gradient(ellipse 40% 30% at 85% 25%, rgba(115,194,206,0.35), transparent 70%);
+  }
+  .hero .wrap { position: relative; }
+  .hero .eyebrow { font-size: 14px; letter-spacing: 0.18em; opacity: 0.85; margin-bottom: 14px; }
+  .hero h1 { font-size: clamp(30px, 5vw, 52px); line-height: 1.3; font-weight: 800; margin-bottom: 18px; }
+  .hero p { font-size: clamp(16px, 2vw, 19px); max-width: 620px; opacity: 0.92; }
+  .hero .btns { margin-top: 34px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 14px 26px; border-radius: 999px;
+    font-weight: 700; text-decoration: none; font-size: 16px;
+  }
+  .btn-light { background: #fff; color: var(--deep); }
+  .btn-line { border: 1.5px solid rgba(255,255,255,0.7); color: #fff; }
+  .wave { position: absolute; left: 0; right: 0; bottom: -1px; width: 100%; height: 90px; }
+
+  /* Sections */
+  section { padding: 84px 0; }
+  .sec-title { text-align: center; margin-bottom: 44px; }
+  .sec-title small { display: block; color: var(--sea); font-weight: 700; letter-spacing: 0.16em; font-size: 13px; margin-bottom: 8px; }
+  .sec-title h2 { font-size: clamp(24px, 3.4vw, 34px); font-weight: 800; }
+  .sec-title p { color: var(--muted); margin-top: 10px; }
+
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .card {
+    background: #fff; border: 1px solid #e3eef1; border-radius: var(--radius);
+    padding: 28px 24px;
+  }
+  .card .num { font-size: 30px; font-weight: 800; color: var(--sea); line-height: 1.2; }
+  .card h3 { font-size: 19px; margin: 8px 0 8px; }
+  .card p { color: var(--muted); font-size: 15px; }
+
+  .bg-foam { background: var(--foam); }
+  .bg-sand { background: var(--sand); }
+
+  /* Tours */
+  .tour { display: flex; flex-direction: column; }
+  .tour .tag {
+    align-self: flex-start; font-size: 12px; font-weight: 700;
+    padding: 4px 10px; border-radius: 999px; margin-bottom: 12px;
+  }
+  .tag-main { background: var(--sea); color: #fff; }
+  .tag-sub { background: #dcebef; color: var(--deep); }
+  .tour .price { font-size: 26px; font-weight: 800; color: var(--deep); margin-top: auto; padding-top: 16px; }
+  .tour .price small { font-size: 14px; font-weight: 500; color: var(--muted); }
+  .note-box {
+    margin-top: 24px; background: #fff; border-left: 4px solid var(--brand);
+    border-radius: 8px; padding: 18px 20px; font-size: 15px; color: var(--muted);
+  }
+  .note-box li { margin-left: 18px; }
+
+  /* Steps */
+  .steps { list-style: none; counter-reset: s; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .steps li {
+    counter-increment: s; background: #fff; border-radius: var(--radius);
+    padding: 26px 20px; border: 1px solid #e3eef1; position: relative;
+  }
+  .steps li::before {
+    content: counter(s); display: grid; place-items: center;
+    width: 34px; height: 34px; border-radius: 50%;
+    background: var(--brand); color: var(--deep); font-weight: 800; margin-bottom: 12px;
+  }
+  .steps h3 { font-size: 17px; margin-bottom: 6px; }
+  .steps p { font-size: 14px; color: var(--muted); }
+
+  /* Contact */
+  .contact { background: var(--deep); color: #fff; text-align: center; }
+  .contact .sec-title p { color: rgba(255,255,255,0.75); }
+  .channels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 820px; margin: 0 auto; }
+  .channel {
+    display: block; text-decoration: none; background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.18); border-radius: var(--radius); padding: 22px 16px;
+  }
+  .channel:hover { background: rgba(255,255,255,0.14); }
+  .channel strong { display: block; font-size: 17px; margin-bottom: 4px; }
+  .channel span { font-size: 14px; opacity: 0.75; }
+
+  footer { background: #062633; color: rgba(255,255,255,0.65); font-size: 13px; padding: 30px 0; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+
+  @media (max-width: 860px) {
+    .nav ul { display: none; }
+    .grid-3, .grid-2, .channels { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr 1fr; }
+    section { padding: 64px 0; }
+    .hero { padding: 80px 0 120px; }
+  }
+  @media (max-width: 520px) {
+    .steps { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">Flare <span>Dive</span></a>
+    <ul>
+      <li><a href="#about">소개</a></li>
+      <li><a href="#tours">투어·요금</a></li>
+      <li><a href="#booking">예약 방법</a></li>
+      <li><a href="#contact">문의</a></li>
+    </ul>
+    <a class="cta-sm" href="#contact">예약 문의</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="wrap">
+      <div class="eyebrow">OKINAWA · KERAMA FUN DIVING</div>
+      <h1>오키나와 케라마 바다를<br>소인원으로, 여유롭게</h1>
+      <p>가이드 1명당 최대 4명. 첫날은 편안한 포인트에서 시작해 손님의 레벨에 맞춰 조금씩 넓혀 갑니다. 수중 사진은 기본으로 포함됩니다.</p>
+      <div class="btns">
+        <a class="btn btn-light" href="#tours">투어·요금 보기</a>
+        <a class="btn btn-line" href="#contact">예약 문의하기</a>
+      </div>
+    </div>
+    <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+      <path fill="#ffffff" d="M0,40 C240,90 480,0 720,36 C960,72 1200,10 1440,44 L1440,90 L0,90 Z"></path>
+    </svg>
+  </div>
+
+  <!-- About -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-title">
+        <small>ABOUT</small>
+        <h2>Dive&amp;Travel Flare를 소개합니다</h2>
+        <p>오키나와에서 직접 가이드하는 1인 다이빙 샵입니다.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="num">2009~</div>
+          <h3>PADI 다이브 프로</h3>
+          <p>2009년부터 PADI 다이브 프로로 활동해 온 PADI IDC Staff Instructor가 직접 안내합니다.</p>
+        </div>
+        <div class="card">
+          <div class="num">10,000+</div>
+          <h3>누적 다이빙</h3>
+          <p>1만 회가 넘는 다이빙 경험으로 케라마와 오키나와 본섬의 포인트를 두루 안내합니다.</p>
+        </div>
+        <div class="card">
+          <div class="num">최대 4명</div>
+          <h3>소인원 가이드</h3>
+          <p>가이드 1명이 최대 4명까지만 함께합니다. 한 분 한 분의 페이스에 맞춘 다이빙을 진행합니다.</p>
+        </div>
+      </div>
+      <div class="grid-2" style="margin-top:20px;">
+        <div class="card">
+          <h3>레벨에 맞춘 보트·포인트 선택</h3>
+          <p>보트마다 스타일과 가는 포인트가 다릅니다. 손님의 경험에 맞는 보트를 골라, 첫날은 쉬운 포인트에서 몸을 풀고 2·3일 차에는 한 단계 위의 포인트로 이어 갑니다.</p>
+        </div>
+        <div class="card">
+          <h3>수중 사진 포함</h3>
+          <p>다이빙 중 촬영한 수중 사진을 요금 안에 포함해 드립니다. 바다에서의 시간을 사진으로도 남겨 가세요.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tours -->
+  <section id="tours" class="bg-foam">
+    <div class="wrap">
+      <div class="sec-title">
+        <small>TOURS &amp; PRICE</small>
+        <h2>투어 · 요금</h2>
+        <p>요금은 모두 1인 기준이며, 가이드와 수중 사진이 포함되어 있습니다.</p>
+      </div>
+      <div class="grid-2">
+        <div class="card tour">
+          <span class="tag tag-main">기본 투어</span>
+          <h3>케라마 3다이브</h3>
+          <p>Flare Dive의 기본 투어입니다. 맑은 물과 다양한 지형으로 유명한 케라마 제도에서 하루 3회 다이빙합니다.</p>
+          <div class="price">28,000엔 <small>/ 1인</small></div>
+        </div>
+        <div class="card tour">
+          <span class="tag tag-sub">리피터 · 4인 이상 팀</span>
+          <h3>본섬 2다이브</h3>
+          <p>만자, 잔파, 나키진, 모토부 등 오키나와 본섬의 포인트에서 2회 다이빙합니다.</p>
+          <div class="price">25,000엔 <small>/ 1인</small></div>
+        </div>
+        <div class="card tour">
+          <span class="tag tag-sub">리피터 · 4인 이상 팀</span>
+          <h3>에몬즈 2다이브</h3>
+          <p>제2차 세계대전 당시 침몰한 구축함 USS Emmons(에몬즈)를 찾아가는 렉 다이빙입니다.</p>
+          <div class="price">28,000엔 <small>/ 1인</small></div>
+        </div>
+        <div class="card tour">
+          <span class="tag tag-sub">리피터 · 4인 이상 팀</span>
+          <h3>헤도 3다이브</h3>
+          <p>오키나와 본섬 최북단 헤도 지역에서 3회 다이빙합니다.</p>
+          <div class="price">33,000엔 <small>/ 1인</small></div>
+        </div>
+      </div>
+      <div class="note-box">
+        <ul>
+          <li>장비 풀렌탈: 5,000엔</li>
+          <li>본섬·에몬즈·헤도 투어는 리피터 손님 또는 4인 이상 팀으로만 진행합니다.</li>
+          <li>프리다이빙은 4인 이상 단체로 진행하며, 사전 상담이 필요합니다.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section id="booking">
+    <div class="wrap">
+      <div class="sec-title">
+        <small>BOOKING</small>
+        <h2>예약 방법</h2>
+        <p>예약금 결제로 예약이 확정됩니다.</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <h3>문의</h3>
+          <p>희망 날짜, 인원, 다이빙 경험(로그 수·자격)을 알려 주세요.</p>
+        </li>
+        <li>
+          <h3>일정 안내</h3>
+          <p>공석과 해황을 확인해 레벨에 맞는 투어를 안내해 드립니다.</p>
+        </li>
+        <li>
+          <h3>예약금 결제</h3>
+          <p>1인당 20,000엔을 온라인(Square)으로 결제하면 예약이 확정됩니다.</p>
+        </li>
+        <li>
+          <h3>다이빙 당일</h3>
+          <p>예약금은 총액에 포함되며, 남은 금액은 당일에 결제합니다.</p>
+        </li>
+      </ol>
+      <div class="grid-2" style="margin-top:20px;">
+        <div class="card bg-sand">
+          <h3>픽업 · 드롭</h3>
+          <p>나하 국제거리 주변이 픽업·드롭 기준 지역입니다. 장비 세척이 가능한 추천 숙소(개별 욕조가 있는 숙소)에 묵으시면 숙소 앞에서 픽업·드롭해 드립니다. 숙소를 정하기 전에 편하게 문의해 주세요.</p>
+        </div>
+        <div class="card bg-sand">
+          <h3>문의 시 알려 주세요</h3>
+          <p>다이빙 자격 단계와 로그 수, 마지막 다이빙 시기, 렌탈 필요 여부를 함께 알려 주시면 더 빠르게 안내해 드릴 수 있습니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="sec-title">
+        <small style="color:var(--brand);">CONTACT</small>
+        <h2>예약 · 문의</h2>
+        <p>편하신 채널로 연락 주세요.</p>
+      </div>
+      <div class="channels">
+        <a class="channel" href="#" data-channel="kakao">
+          <strong>카카오톡 채널</strong>
+          <span>한국어 상담</span>
+        </a>
+        <a class="channel" href="https://www.instagram.com/flare_dive_travel/" target="_blank" rel="noopener">
+          <strong>Instagram</strong>
+          <span>@flare_dive_travel</span>
+        </a>
+        <a class="channel" href="#" data-channel="whatsapp">
+          <strong>WhatsApp</strong>
+          <span>English</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>Dive&amp;Travel Flare (Flare Dive) · 오키나와현 우라소에시</div>
+    <div>© 2026 Flare Dive</div>
+  </div>
+</footer>
+
+</body>
+</html>
