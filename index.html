@@ -12,477 +12,188 @@
 <link rel="icon" href="images/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></symbol>
-  <symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14"/></symbol>
-  <symbol id="i-car" viewBox="0 0 24 24"><path d="M5 16h14M3 16v-4l2-5h14l2 5v4h-2M7 16a2 2 0 1 0 4 0M13 16a2 2 0 1 0 4 0"/></symbol>
-  <symbol id="i-wave" viewBox="0 0 24 24"><path d="M2 8c2 0 2-2 5-2s3 2 5 2 2-2 5-2 3 2 5 2M2 14c2 0 2-2 5-2s3 2 5 2 2-2 5-2 3 2 5 2M2 20c2 0 2-2 5-2s3 2 5 2 2-2 5-2 3 2 5 2"/></symbol>
-  <symbol id="i-cam" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v12H4z"/><circle cx="12" cy="14" r="3.5"/></symbol>
-  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 8 5-3 5 3-1.5-8"/></symbol>
-  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></symbol>
-  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c.8-3.5 3.3-5 7-5s6.2 1.5 7 5M16 4.5a3.5 3.5 0 0 1 0 7M18 15c2 .6 3.4 2.2 4 5"/></symbol>
-  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
-  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol>
-  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
-  <symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></symbol>
-  <symbol id="i-fish" viewBox="0 0 24 24"><path d="M3 12c3-5 9-6 14-3l4-3v12l-4-3c-5 3-11 2-14-3z"/><circle cx="8" cy="11" r=".8"/></symbol>
-  <symbol id="i-send" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></symbol>
-  <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 18V6M3 14h18v4M21 14v-3a3 3 0 0 0-3-3h-8v6"/><circle cx="6.5" cy="10.5" r="1.5"/></symbol>
-  <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></symbol>
-  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
-  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
-  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
-</svg>
-
 <header class="site-nav">
   <div class="wrap inner">
     <a class="logo" href="index.html" aria-label="Flare Dive 홈"><img src="images/logo.png" alt="Flare Dive"></a>
-    <nav aria-label="주요 메뉴">
-      <ul class="nav-links">
-        <li><a href="about.html">강사 소개</a></li>
-        <li><a href="fun-diving-kerama.html">펀다이빙</a></li>
-        <li><a href="padi-courses.html">PADI 코스</a></li>
-        <li><a href="freediving.html">프리다이빙</a></li>
-        <li><a href="stays.html">픽업 &amp; 숙소</a></li>
-        <li><a href="column.html">칼럼</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-      </ul>
-    </nav>
     <div class="nav-right">
-      <div class="lang" aria-label="언어">
-        <span class="on">KO</span>
-        <span title="준비 중">JA</span>
-        <span title="준비 중">EN</span>
-      </div>
-      <a class="btn btn-teal btn-sm" href="booking.html">예약하기</a>
-      <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="메뉴 열기"><svg class="icon"><use href="#i-menu"/></svg></button>
+      <nav aria-label="주요 메뉴">
+        <ul class="nav-links">
+          <li><a href="#about">소개</a></li>
+          <li><a href="#programs">프로그램 · 요금</a></li>
+          <li><a href="#booking">예약 안내</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-teal btn-sm js-kakao" href="#contact">예약 문의</a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="메뉴 열기">☰</button>
     </div>
   </div>
   <div class="mobile-menu" id="mobile-menu">
     <ul>
-      <li><a href="about.html">강사 소개</a></li>
-      <li><a href="fun-diving-kerama.html">펀다이빙</a></li>
-      <li><a href="padi-courses.html">PADI 코스</a></li>
-      <li><a href="freediving.html">프리다이빙</a></li>
-      <li><a href="stays.html">픽업 &amp; 숙소</a></li>
-      <li><a href="column.html">칼럼</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="booking.html">예약하기</a></li>
+      <li><a href="#about">소개</a></li>
+      <li><a href="#programs">프로그램 · 요금</a></li>
+      <li><a href="#booking">예약 안내</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">문의</a></li>
     </ul>
   </div>
 </header>
 
 <main>
 
-  <!-- Hero -->
-  <section class="hero" id="hero">
+  <section class="hero">
     <div class="wrap">
-      <span class="hero-tag"><svg class="icon" style="width:16px;height:16px"><use href="#i-pin"/></svg>오키나와 나하 · 1인 다이빙 숍</span>
+      <span class="label">OKINAWA · NAHA</span>
       <h1>오키나와 다이빙,<br>한 명의 강사가 처음부터 끝까지</h1>
-      <p>상담과 일정 계획, 나하 픽업, 다이빙 가이드, 수중 촬영까지 강사 한 명이 전담합니다. 담당자가 바뀌지 않아 처음부터 끝까지 일관된 안내를 받으실 수 있습니다.</p>
+      <p>상담부터 픽업, 다이빙 가이드, 수중 촬영까지 강사 한 명이 전담합니다.</p>
       <div class="btns">
-        <a class="btn btn-teal btn-lg" href="#availability"><svg class="icon"><use href="#i-cal"/></svg>예약 가능일 확인</a>
-        <a class="btn btn-kakao btn-lg js-kakao" href="#contact"><svg class="icon"><use href="#i-chat"/></svg>카카오톡 문의</a>
+        <a class="btn btn-kakao js-kakao" href="#contact">카카오톡 문의</a>
+        <a class="btn btn-line" href="#programs">요금 보기</a>
       </div>
     </div>
   </section>
 
-  <!-- Fact strip -->
-  <div class="facts">
-    <ul class="wrap">
-      <li><svg class="icon"><use href="#i-award"/></svg>PADI IDC 스태프 강사</li>
-      <li><svg class="icon"><use href="#i-wave"/></svg>10,000회 이상 다이빙</li>
-      <li><svg class="icon"><use href="#i-users"/></svg>한 가이드당 최대 4명</li>
-      <li><svg class="icon"><use href="#i-cam"/></svg>수중 사진 포함</li>
-      <li><svg class="icon"><use href="#i-car"/></svg>나하 국제거리 픽업</li>
-    </ul>
-  </div>
-
-  <!-- AI Ask -->
-  <section class="section" id="ask">
+  <section class="section" id="about">
     <div class="wrap">
-      <div class="head-center"><h2 class="h2" style="font-size:28px">자주 묻는 내용을 바로 확인하실 수 있습니다</h2></div>
-      <div class="ask-box">
-        <form class="ask-form" id="ask-form">
-          <label for="ask-input" class="sr-only">질문</label>
-          <input id="ask-input" type="text" placeholder="예: 케라마 3회 다이빙 요금" autocomplete="off">
-          <button class="go" type="submit" aria-label="질문하기"><svg class="icon"><use href="#i-send"/></svg></button>
-        </form>
-        <div class="ask-chips" id="ask-chips">
-          <button type="button">케라마 요금</button>
-          <button type="button">예약금</button>
-          <button type="button">픽업 지역</button>
-          <button type="button">기상 취소</button>
-          <button type="button">장비 렌탈</button>
-        </div>
-        <div class="answer" id="answer" aria-live="polite">
-          <span class="tag"><svg class="icon" style="width:16px;height:16px"><use href="#i-spark"/></svg>답변</span>
-          <p id="answer-text">케라마 제도 펀다이빙은 보트 다이빙 3회 기준 1인 ¥28,000입니다. 예약금은 1인 ¥20,000이며 총 금액에 포함됩니다. 나하 국제거리 주변 숙소에 묵으시면 숙소 앞 픽업·드롭이 가능합니다.</p>
-          <div class="src" id="answer-src">출처
-            <a href="fun-diving-kerama.html">케라마 펀다이빙 →</a>
-            <a href="faq.html">예약 &amp; 예약금 FAQ →</a>
-            <a href="stays.html">픽업 &amp; 추천 숙소 →</a>
-          </div>
-          <div class="foot">
-            <span>그 밖의 문의는 강사가 직접 답변합니다.</span>
-            <a class="btn btn-kakao btn-sm js-kakao" href="#contact"><svg class="icon" style="width:16px;height:16px"><use href="#i-chat"/></svg>카카오톡 상담</a>
-          </div>
-        </div>
-        <p class="disclaimer">위 답변은 참고용이며, 예약은 강사 확인 후 확정됩니다.</p>
+      <span class="label">ABOUT</span>
+      <h2 class="h2">첫 상담부터 마지막 다이빙까지,<br>강사 한 명이 전담합니다</h2>
+      <p class="lead">플레어다이브는 1인 다이빙 숍입니다. 진행 도중 담당자가 바뀌지 않으며, 게스트의 레벨에 맞는 보트와 포인트를 골라 소규모로 안내합니다.</p>
+      <div class="numbers">
+        <div><strong>2009</strong><span>PADI 프로 활동 시작</span></div>
+        <div><strong>10,000+</strong><span>누적 다이빙 횟수</span></div>
+        <div><strong>최대 4명</strong><span>가이드 1명당 인원</span></div>
+        <div><strong>0건</strong><span>투어 중 다이빙 사고</span></div>
       </div>
     </div>
   </section>
 
-  <!-- One-person shop message -->
-  <section class="section soft" id="one-person">
-    <div class="wrap">
-      <div class="head-center">
-        <span class="eyebrow">1인 숍 · 전담 가이드</span>
-        <h2 class="h2">첫 상담부터 마지막 다이빙까지,<br>강사 한 명이 전담합니다</h2>
-        <p class="lead">진행 도중 담당 스태프가 바뀌지 않습니다. 예약 단계부터 안내를 맡을 강사가 정해져 있습니다.</p>
-      </div>
-      <ol class="flow">
-        <li><span class="ic"><svg class="icon"><use href="#i-chat"/></svg></span><strong>상담</strong><span>경험과 희망 사항을 확인합니다</span></li>
-        <li><span class="ic"><svg class="icon"><use href="#i-map"/></svg></span><strong>일정 계획</strong><span>레벨에 맞는 보트와 포인트를 정합니다</span></li>
-        <li><span class="ic"><svg class="icon"><use href="#i-car"/></svg></span><strong>픽업</strong><span>나하 숙소 앞까지 모시러 갑니다</span></li>
-        <li><span class="ic"><svg class="icon"><use href="#i-wave"/></svg></span><strong>다이빙</strong><span>모든 다이빙에 강사가 동행합니다</span></li>
-        <li><span class="ic"><svg class="icon"><use href="#i-cam"/></svg></span><strong>사진</strong><span>수중 사진을 강사가 직접 촬영합니다</span></li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- Stats -->
-  <section class="section" id="stats">
-    <div class="wrap stats">
-      <div><div class="num">2009</div><strong>PADI 프로 활동 시작</strong><p>2009년부터 PADI 다이브 프로로 활동하고 있습니다</p></div>
-      <div><div class="num">10,000+</div><strong>다이빙 횟수</strong><p>누적 다이빙 10,000회 이상</p></div>
-      <div><div class="num">10년+</div><strong>오키나와 가이드 경력</strong><p>케라마와 본섬의 모든 포인트를 안내합니다</p></div>
-      <div><div class="num">0건</div><strong>투어 중 다이빙 사고</strong><p>현재까지 투어 중 다이빙 사고는 한 건도 없습니다</p></div>
-    </div>
-  </section>
-
-  <!-- Strengths -->
-  <section class="section soft" id="strengths">
-    <div class="wrap">
-      <div class="head-center">
-        <span class="eyebrow">플레어다이브의 강점</span>
-        <h2 class="h2">레벨에 맞는 보트와 포인트를 선택합니다</h2>
-        <p class="lead">케라마와 본섬 모두 보트마다 다이빙 스타일과 방문 포인트가 다릅니다. 여러 보트와 협력하고 있어 게스트의 레벨과 희망에 맞는 보트를 선택할 수 있습니다.</p>
-      </div>
-      <div class="strengths">
-        <article class="plan-card">
-          <img src="images/b04.jpg" alt="보트 위에서 다이빙을 준비하는 게스트들" loading="lazy">
-          <div class="body">
-            <h3>3일 다이빙 진행 예시</h3>
-            <ol>
-              <li><span class="day">1일차</span>난도가 낮은 포인트에서 감각을 되찾습니다</li>
-              <li><span class="day">2일차</span>지형과 수심의 폭을 넓혀 갑니다</li>
-              <li><span class="day">3일차</span>레벨에 따라 상급 포인트까지 진행합니다</li>
-            </ol>
-          </div>
-        </article>
-        <ul class="point-list">
-          <li><svg class="icon"><use href="#i-user"/></svg><div><strong>전담 1인 강사</strong><span>상담부터 촬영까지 같은 강사가 담당합니다</span></div></li>
-          <li><svg class="icon"><use href="#i-award"/></svg><div><strong>경력</strong><span>PADI IDC 스태프 강사, 2009년부터 활동</span></div></li>
-          <li><svg class="icon"><use href="#i-shield"/></svg><div><strong>무사고 기록</strong><span>오키나와에서 10년 이상 가이드하는 동안 투어 중 다이빙 사고가 없었습니다</span></div></li>
-          <li><svg class="icon"><use href="#i-pin"/></svg><div><strong>모든 포인트 안내</strong><span>케라마 제도와 오키나와 본섬 전 지역</span></div></li>
-          <li><svg class="icon"><use href="#i-users"/></svg><div><strong>소규모</strong><span>가이드 1명당 최대 4명</span></div></li>
-          <li><svg class="icon"><use href="#i-cam"/></svg><div><strong>수중 사진 포함</strong><span>다이빙하는 모습을 강사가 직접 촬영합니다</span></div></li>
-          <li><svg class="icon"><use href="#i-car"/></svg><div><strong>나하 픽업</strong><span>국제거리 주변 숙소 앞 픽업 · 드롭</span></div></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Photo Break -->
-  <section class="photo-break" style="background-image:url('images/a13.jpg')">
-    <div class="wrap">
-      <h2>케라마의 맑은 바다로</h2>
-      <p>나하에서 보트로 약 1시간, 바다거북과 산호초를 만날 수 있습니다</p>
-    </div>
-  </section>
-
-  <!-- Programs & prices -->
   <section class="section" id="programs">
     <div class="wrap">
-      <div class="head-center">
-        <span class="eyebrow">프로그램 · 요금</span>
-        <h2 class="h2">펀다이빙은 케라마 제도를 기본으로 합니다</h2>
-        <p class="lead">모든 요금은 1인 기준입니다. 예약금 ¥20,000은 총 금액에 포함되며, 잔금은 다이빙 당일에 결제합니다.</p>
-      </div>
-      <div class="programs">
-        <article class="main-price">
-          <span class="pill pill-teal">기본 프로그램</span>
+      <span class="label">PROGRAMS</span>
+      <h2 class="h2">프로그램 · 요금</h2>
+      <p class="lead">모든 요금은 1인 기준입니다.</p>
+
+      <div class="main-program">
+        <div>
           <h3>케라마 제도 펀다이빙</h3>
-          <p class="sub">보트 다이빙 3회 · 나하 픽업 포함</p>
-          <div class="price">¥28,000 <small>/ 1인</small></div>
-          <ul class="checks">
-            <li>오픈워터 이상</li>
-            <li>가이드 1명당 최대 4명</li>
-            <li>수중 사진 포함</li>
-            <li>예약금 ¥20,000 (총 금액에 포함)</li>
-          </ul>
-          <a class="btn btn-teal" href="#availability">날짜 확인하고 예약하기</a>
-        </article>
-        <div class="extra">
-          <h3>재방문 게스트 · 4인 이상 프라이빗 팀이라면</h3>
-          <div class="extra-grid">
-            <article class="extra-card wide">
-              <span class="pill pill-line">재방문 게스트 · 4인 이상 프라이빗 팀 전용</span>
-              <h4>본섬 펀다이빙</h4>
-              <span class="meta">만자 · 잔파 · 나키진 · 모토부 · 2회 다이빙</span>
-              <div class="price">¥25,000 <small>/ 1인</small></div>
-              <a class="link-arrow" href="fun-diving-main-island.html">자세히 보기 →</a>
-            </article>
-            <article class="extra-card">
-              <span class="pill pill-line">재방문 · 4인 이상 팀</span>
-              <h4>USS 에몬즈</h4>
-              <span class="meta">스페셜 지역 · 2회 다이빙</span>
-              <div class="price">¥28,000 <small>/ 1인</small></div>
-              <a class="link-arrow" href="fun-diving-special.html">자세히 보기 →</a>
-            </article>
-            <article class="extra-card">
-              <span class="pill pill-line">재방문 · 4인 이상 팀</span>
-              <h4>헤도 곶</h4>
-              <span class="meta">스페셜 지역 · 3회 다이빙</span>
-              <div class="price">¥33,000 <small>/ 1인</small></div>
-              <a class="link-arrow" href="fun-diving-special.html">자세히 보기 →</a>
-            </article>
-          </div>
+          <p>보트 다이빙 3회 · 나하 픽업 · 수중 사진 포함 · 오픈워터 이상</p>
+        </div>
+        <div class="price">
+          <strong>¥28,000</strong><small>/ 1인</small><br>
+          <a class="btn btn-teal btn-sm js-kakao" href="#contact">예약 문의</a>
         </div>
       </div>
-      <div class="others">
-        <a class="other" href="padi-courses.html"><div class="top"><h4>PADI 코스</h4><span>›</span></div><p>오픈워터 ¥65,000부터 · 전 과정 한국어 진행</p></a>
-        <a class="other" href="padi-specialty.html"><div class="top"><h4>PADI 스페셜티</h4><span>›</span></div><p>엔리치드 에어 ¥15,000 등 12개 코스</p></a>
-        <a class="other" href="freediving.html"><div class="top"><h4>프리다이빙</h4><span class="pill pill-soft">상담 필수</span></div><p>4인 이상 단체 한정 · 요금은 상담 후 안내</p></a>
-        <a class="other js-kakao" href="#contact"><div class="top"><h4>팀 투어</h4><span class="pill pill-soft">상담 필수</span></div><p>일정과 요금은 별도 상담으로 안내합니다</p></a>
-      </div>
+
+      <ul class="price-list">
+        <li><a href="#contact" class="js-kakao"><h4>본섬 펀다이빙</h4><span class="val">¥25,000</span><span class="cond">2회 다이빙 · 재방문 게스트 또는 4인 이상 팀</span></a></li>
+        <li><a href="#contact" class="js-kakao"><h4>USS 에몬즈</h4><span class="val">¥28,000</span><span class="cond">2회 다이빙 · 재방문 게스트 또는 4인 이상 팀</span></a></li>
+        <li><a href="#contact" class="js-kakao"><h4>헤도 곶</h4><span class="val">¥33,000</span><span class="cond">3회 다이빙 · 재방문 게스트 또는 4인 이상 팀</span></a></li>
+        <li><a href="#contact" class="js-kakao"><h4>PADI 오픈워터 코스</h4><span class="val">¥65,000~</span><span class="cond">전 과정 한국어 진행</span></a></li>
+        <li><a href="#contact" class="js-kakao"><h4>PADI 스페셜티</h4><span class="val">¥15,000~</span><span class="cond">엔리치드 에어 등 12개 코스</span></a></li>
+        <li><a href="#contact" class="js-kakao"><h4>프리다이빙 · 팀 투어</h4><span class="val">상담</span><span class="cond">4인 이상 단체 · 요금은 상담 후 안내</span></a></li>
+      </ul>
+      <p class="note">장비 풀 렌탈 ¥5,000 · 예약금 1인 ¥20,000(총 금액에 포함)</p>
     </div>
   </section>
 
-  <!-- Photo Break -->
-  <section class="photo-break" style="background-image:url('images/b11.jpg')">
-    <div class="wrap">
-      <h2>모든 다이빙을 강사가 직접 안내합니다</h2>
-      <p>수중 촬영까지 강사가 함께 맡습니다</p>
-    </div>
-  </section>
+  <div class="photo" style="background-image:url('images/a13.jpg')" role="img" aria-label="케라마 바닷속 물고기 떼"></div>
 
-  <!-- Availability -->
-  <section class="section" id="availability">
+  <section class="section" id="booking">
     <div class="wrap">
-      <div class="head-center">
-        <span class="eyebrow">예약 가능일</span>
-        <h2 class="h2">예약 가능한 날짜를 확인할 수 있습니다</h2>
-        <p class="lead">하루 최대 4명까지 접수합니다. 원하는 날짜를 선택하면 해당 날짜로 바로 문의할 수 있습니다.</p>
-      </div>
-      <div class="avail">
-        <div class="cal">
-          <div class="cal-head">
-            <h3 id="cal-title"></h3>
-            <div class="nav-btns">
-              <button type="button" id="cal-prev" aria-label="이전 달">‹</button>
-              <button type="button" id="cal-next" aria-label="다음 달">›</button>
-            </div>
-          </div>
-          <div class="cal-grid" id="cal-grid"></div>
-          <p class="cal-note">실시간 공석 연동은 준비 중입니다. 날짜를 선택하면 해당 날짜로 문의할 수 있습니다.</p>
-        </div>
-        <div class="txt">
-          <h3 class="big">하루 접수 인원이 정해져 있습니다</h3>
-          <p>1인 숍으로 소규모 안내를 원칙으로 하기 때문에 하루 접수 인원을 제한합니다. 희망 날짜가 정해져 있다면 미리 예약하시기를 권합니다.</p>
-          <div class="btns">
-            <a class="btn btn-teal" href="booking.html">예약 페이지 →</a>
-            <a class="btn btn-outline js-kakao" href="#contact">날짜 문의</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- How it works -->
-  <section class="section soft" id="how">
-    <div class="wrap">
-      <div class="head-center">
-        <span class="eyebrow">예약 방법</span>
-        <h2 class="h2">예약 절차</h2>
-      </div>
+      <span class="label">BOOKING</span>
+      <h2 class="h2">예약 안내</h2>
+      <p class="lead">하루 최대 4명까지 접수합니다. 희망 날짜가 정해져 있다면 미리 문의하시기를 권합니다.</p>
       <ol class="steps">
-        <li><div class="n">01 <svg class="icon"><use href="#i-cal"/></svg></div><strong>날짜 확인</strong><p>캘린더에서 예약 가능한 날짜를 확인합니다</p></li>
-        <li><div class="n">02 <svg class="icon"><use href="#i-chat"/></svg></div><strong>문의 · 예약</strong><p>카카오톡 또는 예약 폼으로 접수합니다</p></li>
-        <li><div class="n">03 <svg class="icon"><use href="#i-card"/></svg></div><strong>예약금 결제</strong><p>Square로 1인 ¥20,000을 결제합니다</p></li>
-        <li><div class="n">04 <svg class="icon"><use href="#i-car"/></svg></div><strong>나하 픽업</strong><p>당일 아침 숙소 앞에서 픽업합니다</p></li>
-        <li><div class="n">05 <svg class="icon"><use href="#i-fish"/></svg></div><strong>다이빙</strong><p>케라마의 바다로 출발합니다</p></li>
+        <li><strong>문의</strong><p>카카오톡으로 날짜, 인원, 다이빙 경험을 알려 주시면 일정을 안내합니다.</p></li>
+        <li><strong>예약금 결제</strong><p>Square로 1인 ¥20,000을 결제하면 예약이 확정됩니다.</p></li>
+        <li><strong>나하 픽업</strong><p>당일 아침 숙소 앞에서 픽업합니다.</p></li>
+        <li><strong>다이빙</strong><p>잔금은 다이빙 당일에 결제합니다.</p></li>
       </ol>
+      <div class="btn-row">
+        <a class="btn btn-kakao js-kakao" href="#contact">카카오톡으로 예약 문의</a>
+      </div>
     </div>
   </section>
 
-  <!-- Stays teaser -->
   <section class="section" id="stays">
-    <div class="wrap">
-      <div class="head-center">
-        <span class="eyebrow">픽업 · 추천 숙소</span>
-        <h2 class="h2">나하 국제거리 주변 숙소는 픽업이 편리합니다</h2>
-        <p class="lead">장비 세척을 위해 욕조가 있는 개인실 숙소를 추천합니다. 추천 숙소에 묵으시면 숙소 앞에서 픽업·드롭합니다.</p>
+    <div class="wrap split">
+      <div>
+        <span class="label">PICKUP</span>
+        <h2 class="h2">나하 국제거리 주변 숙소를 추천합니다</h2>
+        <p class="lead">국제거리 주변 숙소는 숙소 앞에서 픽업·드롭합니다. 장비 세척을 위해 욕조가 있는 개인실을 권합니다.</p>
       </div>
-      <div class="cards-3">
-        <article class="hotel">
-          <div class="ph"><svg class="icon"><use href="#i-bed"/></svg></div>
-          <div class="body">
-            <h3>호텔 아베스트 나하 국제거리</h3>
-            <div class="tags"><span>비즈니스 호텔</span><span class="ok">장비 세척 OK</span></div>
-            <p>숙소 앞 픽업 · 드롭</p>
-            <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+Abest+Naha+Kokusai+Dori" target="_blank" rel="noopener">Google 지도에서 보기 ↗</a>
-          </div>
-        </article>
-        <article class="hotel">
-          <div class="ph"><svg class="icon"><use href="#i-bed"/></svg></div>
-          <div class="body">
-            <h3>알몬트 호텔 나하 현청앞</h3>
-            <div class="tags"><span>비즈니스 호텔</span><span class="ok">장비 세척 OK</span></div>
-            <p>숙소 앞 픽업 · 드롭</p>
-            <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Almont+Hotel+Naha+Kenchomae" target="_blank" rel="noopener">Google 지도에서 보기 ↗</a>
-          </div>
-        </article>
-        <article class="hotel">
-          <div class="ph"><svg class="icon"><use href="#i-bed"/></svg></div>
-          <div class="body">
-            <h3>마이 플레이스 (My Place)</h3>
-            <div class="tags"><span>가성비 숙소</span><span class="ok">장비 세척 OK</span></div>
-            <p>숙소 앞 픽업 · 드롭</p>
-            <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=My+Place+Naha+Okinawa" target="_blank" rel="noopener">Google 지도에서 보기 ↗</a>
-          </div>
-        </article>
-      </div>
-      <div class="center-cta"><a class="btn btn-outline" href="stays.html">추천 숙소 10곳 전체 보기 →</a></div>
+      <ul class="stay-list">
+        <li><div><strong>호텔 아베스트 나하 국제거리</strong><span>비즈니스 호텔</span></div><a href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+Abest+Naha+Kokusai+Dori" target="_blank" rel="noopener">지도 ↗</a></li>
+        <li><div><strong>알몬트 호텔 나하 현청앞</strong><span>비즈니스 호텔</span></div><a href="https://www.google.com/maps/search/?api=1&amp;query=Almont+Hotel+Naha+Kenchomae" target="_blank" rel="noopener">지도 ↗</a></li>
+        <li><div><strong>마이 플레이스 (My Place)</strong><span>가성비 숙소</span></div><a href="https://www.google.com/maps/search/?api=1&amp;query=My+Place+Naha+Okinawa" target="_blank" rel="noopener">지도 ↗</a></li>
+      </ul>
     </div>
   </section>
 
-  <!-- Instructor teaser -->
-  <section class="section soft" id="instructor">
+  <section class="section" id="instructor">
     <div class="wrap instructor">
       <img src="images/b01.jpg" alt="플레어다이브 유병길 강사" loading="lazy">
       <div>
-        <span class="eyebrow">강사 소개</span>
-        <h2 class="h2">안내를 맡을 강사를<br>먼저 소개합니다</h2>
-        <p class="lead">유병길 강사는 PADI IDC 스태프 강사입니다. 2009년부터 PADI 프로로 활동했으며, 오키나와에서 10년 이상 게스트를 직접 안내하고 있습니다.</p>
+        <span class="label">INSTRUCTOR</span>
+        <h2 class="h2">유병길 강사</h2>
+        <p class="lead">2009년부터 PADI 프로로 활동했으며, 오키나와에서 10년 이상 케라마와 본섬의 모든 포인트를 안내하고 있습니다.</p>
         <ul>
           <li>PADI IDC 스태프 강사 (#261547) · 일본 잠수사 자격</li>
-          <li>10,000회 이상 다이빙 · 투어 중 다이빙 사고 없음</li>
+          <li>누적 다이빙 10,000회 이상 · 투어 중 다이빙 사고 없음</li>
           <li>영국 Dive Magazine에 수중 사진가로 소개</li>
         </ul>
-        <a class="btn btn-navy" href="about.html">강사 소개 자세히 보기 →</a>
       </div>
     </div>
   </section>
 
-  <!-- Photo Break -->
-  <section class="photo-break" style="background-image:url('images/b07.jpg')">
-    <div class="wrap">
-      <h2>함께한 게스트들의 이야기</h2>
-      <p>Google 리뷰 소개 페이지를 준비하고 있습니다</p>
-    </div>
-  </section>
-
-  <!-- Latest columns -->
-  <section class="section" id="columns">
-    <div class="wrap">
-      <div class="head-center">
-        <span class="eyebrow">칼럼</span>
-        <h2 class="h2">다이빙 전에 읽어 두면 좋은 글</h2>
-      </div>
-      <div class="cards-3">
-        <a class="post" href="column-kerama-diving-season.html">
-          <img src="images/a05.jpg" alt="케라마 바다의 산호와 물고기" loading="lazy">
-          <span class="cat">시즌 &amp; 수온</span>
-          <h3>케라마 다이빙 시즌 가이드: 월별 수온과 시야</h3>
-          <p>월별 수온과 슈트 두께, 시야를 한눈에 정리했습니다.</p>
-          <span class="meta">읽는 시간 4분</span>
-        </a>
-        <a class="post" href="column-okinawa-open-water-guide.html">
-          <img src="images/a17.jpg" alt="산호초 위를 지나는 다이버" loading="lazy">
-          <span class="cat">자격증 따기</span>
-          <h3>오키나와 오픈워터 자격증 취득 기간과 준비 사항</h3>
-          <p>일정, 비용, 준비물을 순서대로 정리했습니다.</p>
-          <span class="meta">읽는 시간 4분</span>
-        </a>
-        <a class="post" href="column-naha-diving-hotel-tips.html">
-          <img src="images/a14.jpg" alt="오키나와의 맑은 바닷속" loading="lazy">
-          <span class="cat">나하 여행 팁</span>
-          <h3>다이버를 위한 나하 숙소 선택 가이드</h3>
-          <p>픽업하기 좋은 위치와 장비 세척 여건을 살펴봅니다.</p>
-          <span class="meta">읽는 시간 4분</span>
-        </a>
-      </div>
-      <div class="center-cta"><a class="btn btn-outline" href="column.html">칼럼 모두 보기 →</a></div>
-    </div>
-  </section>
-
-  <!-- FAQ preview -->
-  <section class="section soft" id="faq">
-    <div class="wrap">
-      <div class="head-center">
-        <span class="eyebrow">FAQ</span>
+  <section class="section" id="faq">
+    <div class="wrap split">
+      <div>
+        <span class="label">FAQ</span>
         <h2 class="h2">자주 묻는 질문</h2>
       </div>
-      <div class="faq">
-        <details open>
-          <summary>예약금은 얼마입니까?</summary>
-          <p>1인당 ¥20,000입니다. 예약금은 총 금액에 포함되며, 잔금은 다이빙 당일에 결제합니다.</p>
-        </details>
-        <details>
-          <summary>기상 악화로 투어가 취소되면 예약금은 어떻게 됩니까?</summary>
-          <p>기상 또는 해상 상태 악화로 투어가 취소되는 경우 예약금은 전액 환불됩니다.</p>
-        </details>
-        <details>
-          <summary>픽업 가능 지역은 어디입니까?</summary>
-          <p>나하시 국제거리 주변 숙소 앞에서 픽업합니다.</p>
-        </details>
-        <details>
-          <summary>오픈워터 자격으로 케라마 다이빙이 가능합니까?</summary>
-          <p>가능합니다. 레벨에 맞는 보트와 포인트를 선택해 진행합니다.</p>
-        </details>
-        <details>
-          <summary>수중 사진은 별도 비용이 있습니까?</summary>
-          <p>요금에 포함되어 있습니다. 안전에 지장이 없는 범위에서 강사가 직접 촬영합니다.</p>
-        </details>
-      </div>
-      <div class="center-cta"><a class="btn btn-outline" href="faq.html">FAQ 전체 보기 →</a></div>
-    </div>
-  </section>
-
-  <!-- Photo Break -->
-  <section class="photo-break" style="background-image:url('images/a14.jpg')">
-    <div class="wrap">
-      <h2>다음 바다는 오키나와에서</h2>
-      <p>소규모로 운영하므로 희망 날짜는 미리 예약하시기를 권합니다</p>
-    </div>
-  </section>
-
-  <!-- Contact CTA -->
-  <section class="section" id="contact">
-    <div class="wrap">
-      <div class="head-center">
-        <span class="eyebrow">문의</span>
-        <h2 class="h2">예약 및 문의</h2>
-        <p class="lead">모든 문의는 안내를 맡을 강사가 직접 답변합니다.</p>
-      </div>
-      <div class="contact-card">
-        <h3>카카오톡 상담</h3>
-        <p>다이빙 진행 중에는 답변이 다소 늦어질 수 있습니다.</p>
-        <a class="btn btn-kakao btn-lg js-kakao" href="#contact"><svg class="icon"><use href="#i-chat"/></svg>카카오톡 문의</a>
-        <p class="alt">기타 문의 채널</p>
-        <div class="alts">
-          <a class="btn btn-outline btn-sm" href="https://www.instagram.com/flare_dive_travel/" target="_blank" rel="noopener"><svg class="icon" style="width:16px;height:16px"><use href="#i-insta"/></svg>Instagram</a>
-          <a class="btn btn-outline btn-sm" href="https://wa.me/818022206583" target="_blank" rel="noopener"><svg class="icon" style="width:16px;height:16px"><use href="#i-phone"/></svg>WhatsApp</a>
-          <a class="btn btn-outline btn-sm" href="mailto:padi261547@gmail.com"><svg class="icon" style="width:16px;height:16px"><use href="#i-mail"/></svg>이메일</a>
+      <div>
+        <div class="faq">
+          <details>
+            <summary>기상 악화로 투어가 취소되면 예약금은 어떻게 됩니까?</summary>
+            <p>기상 또는 해상 상태 악화로 투어가 취소되는 경우 예약금은 전액 환불됩니다.</p>
+          </details>
+          <details>
+            <summary>게스트 사정으로 취소하면 어떻게 됩니까?</summary>
+            <p>투어 14일 전부터는 예약금이 환불되지 않습니다. 전날 또는 당일 취소 시에는 투어 요금 전액이 청구됩니다.</p>
+          </details>
+          <details>
+            <summary>오픈워터 자격으로 케라마 다이빙이 가능합니까?</summary>
+            <p>가능합니다. 레벨에 맞는 보트와 포인트를 선택해 진행합니다.</p>
+          </details>
+          <details>
+            <summary>장비 렌탈 요금은 얼마입니까?</summary>
+            <p>기본 렌탈 ¥4,000, 풀 렌탈 ¥5,000입니다. 2일차부터는 각각 ¥3,000, ¥3,500입니다.</p>
+          </details>
+          <details>
+            <summary>겨울에도 다이빙할 수 있습니까?</summary>
+            <p>오키나와는 연중 다이빙이 가능합니다. 겨울철에는 보트코트와 추가 웻슈트 등 방한 장비를 무료로 제공합니다.</p>
+          </details>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <span class="label">CONTACT</span>
+      <h2 class="h2">예약 및 문의</h2>
+      <p class="lead">모든 문의는 강사가 직접 답변합니다. 다이빙 진행 중에는 답변이 다소 늦어질 수 있습니다.</p>
+      <a class="btn btn-kakao js-kakao" href="#contact">카카오톡 문의</a>
+      <div class="alts">
+        <a href="https://www.instagram.com/flare_dive_travel/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/818022206583" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:padi261547@gmail.com">이메일</a>
       </div>
     </div>
   </section>
@@ -491,62 +202,30 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <img src="images/logo.png" alt="Flare Dive">
+    <div class="foot-top">
+      <div>
         <strong>Dive&amp;Travel Flare · 플레어다이브</strong>
-        <p>강사 한 명이 처음부터 끝까지 안내하는 오키나와 1인 다이빙 숍입니다.</p>
-        <dl>
-          <dt>전화 · WhatsApp</dt><dd><a href="tel:+818022206583">+81 80-2220-6583</a></dd>
-          <dt>이메일</dt><dd><a href="mailto:padi261547@gmail.com">padi261547@gmail.com</a></dd>
-          <dt>픽업 지역</dt><dd>오키나와 나하시 국제거리 주변</dd>
-        </dl>
+        <p>전화 · WhatsApp <a href="tel:+818022206583">+81 80-2220-6583</a><br>
+        이메일 <a href="mailto:padi261547@gmail.com">padi261547@gmail.com</a><br>
+        픽업 지역 오키나와 나하시 국제거리 주변</p>
       </div>
-      <div class="foot-col">
-        <h4>다이빙</h4>
-        <ul>
-          <li><a href="fun-diving-kerama.html">케라마 펀다이빙</a></li>
-          <li><a href="fun-diving-main-island.html">본섬 펀다이빙</a></li>
-          <li><a href="fun-diving-special.html">스페셜 지역 (USS 에몬즈 · 헤도)</a></li>
-          <li><a href="padi-courses.html">PADI 코스</a></li>
-          <li><a href="padi-specialty.html">PADI 스페셜티</a></li>
-          <li><a href="freediving.html">프리다이빙 (단체 상담)</a></li>
-        </ul>
-      </div>
-      <div class="foot-col">
-        <h4>예약 안내</h4>
-        <ul>
-          <li><a href="booking.html">예약하기</a></li>
-          <li><a href="stays.html">픽업 &amp; 추천 숙소</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="cancellation-policy.html">환불 정책</a></li>
-          <li><a href="medical.html">다이버 건강 체크</a></li>
-        </ul>
-      </div>
-      <div class="foot-col">
-        <h4>플레어다이브</h4>
-        <ul>
-          <li><a href="about.html">강사 소개</a></li>
-          <li><a href="column.html">칼럼</a></li>
-          <li><a href="contact.html">문의하기</a></li>
-        </ul>
+      <div class="foot-links">
+        <a href="#about">소개</a>
+        <a href="#programs">프로그램 · 요금</a>
+        <a href="#booking">예약 안내</a>
+        <a href="#stays">픽업 · 숙소</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">문의</a>
       </div>
     </div>
     <div class="foot-bottom">
       <span>© Dive&amp;Travel Flare. 사이트의 모든 사진은 투어 중 직접 촬영한 것입니다.</span>
-      <nav aria-label="법적 고지">
-        <a href="legal.html#terms">이용약관</a>
-        <a href="legal.html#privacy">개인정보처리방침</a>
-        <a href="legal.html#tokushoho">特定商取引法に基づく表記</a>
-      </nav>
     </div>
   </div>
 </footer>
 
-<a class="ask-float" href="#ask"><svg class="icon"><use href="#i-spark"/></svg>자주 묻는 질문</a>
-
 <div class="sticky-bar">
-  <a class="btn btn-teal" href="#availability">날짜 보기</a>
+  <a class="btn btn-line" style="color:var(--navy)" href="#programs">요금 보기</a>
   <a class="btn btn-kakao js-kakao" href="#contact">카카오톡 문의</a>
 </div>
 
