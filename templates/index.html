@@ -1,0 +1,216 @@
+{#- 이 파일은 홈페이지의 "틀"입니다. 문구는 content/text.yml, 사진은 content/images.yml 에서 고칩니다. -#}
+{%- set kakao = t.links.kakao or "#contact" -%}
+{%- set kakao_attr = ' target="_blank" rel="noopener"' if t.links.kakao else '' -%}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ t.meta.title }}</title>
+<meta name="description" content="{{ t.meta.description }}">
+<meta property="og:title" content="{{ t.meta.share_title }}">
+<meta property="og:description" content="{{ t.meta.share_description }}">
+<meta property="og:image" content="images/{{ img.share.file }}">
+<meta property="og:type" content="website">
+<link rel="icon" href="images/{{ img.logo.file }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>.hero { background-image: url("images/{{ img.hero.file }}"); }</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="wrap inner">
+    <a class="logo" href="index.html" aria-label="{{ img.logo.alt }} 홈"><img src="images/{{ img.logo.file }}" alt="{{ img.logo.alt }}"></a>
+    <div class="nav-right">
+      <nav aria-label="주요 메뉴">
+        <ul class="nav-links">
+          {%- for item in t.nav['items'] %}
+          <li><a href="{{ item.link }}">{{ item.label }}</a></li>
+          {%- endfor %}
+        </ul>
+      </nav>
+      <a class="btn btn-teal btn-sm" href="{{ kakao }}"{{ kakao_attr }}>{{ t.nav.button }}</a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="메뉴 열기">☰</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      {%- for item in t.nav['items'] %}
+      <li><a href="{{ item.link }}">{{ item.label }}</a></li>
+      {%- endfor %}
+      <li><a href="#contact">{{ t.nav.contact_label }}</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="label">{{ t.hero.label }}</span>
+      <h1>{{ t.hero.title | lines }}</h1>
+      <p>{{ t.hero.text }}</p>
+      <div class="btns">
+        <a class="btn btn-kakao" href="{{ kakao }}"{{ kakao_attr }}>{{ t.hero.button_main }}</a>
+        <a class="btn btn-line" href="#programs">{{ t.hero.button_sub }}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap">
+      <span class="label">{{ t.about.label }}</span>
+      <h2 class="h2">{{ t.about.title | lines }}</h2>
+      <p class="lead">{{ t.about.text }}</p>
+      <div class="numbers">
+        {%- for n in t.about.numbers %}
+        <div><strong>{{ n.value }}</strong><span>{{ n.label }}</span></div>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="programs">
+    <div class="wrap">
+      <span class="label">{{ t.programs.label }}</span>
+      <h2 class="h2">{{ t.programs.title | lines }}</h2>
+      <p class="lead">{{ t.programs.text }}</p>
+
+      <div class="main-program">
+        <div>
+          <h3>{{ t.programs.main.name }}</h3>
+          <p>{{ t.programs.main.detail }}</p>
+        </div>
+        <div class="price">
+          <strong>{{ t.programs.main.price }}</strong><small>{{ t.programs.main.unit }}</small><br>
+          <a class="btn btn-teal btn-sm" href="{{ kakao }}"{{ kakao_attr }}>{{ t.programs.main.button }}</a>
+        </div>
+      </div>
+
+      <ul class="price-list">
+        {%- for p in t.programs.list %}
+        <li><a href="{{ kakao }}"{{ kakao_attr }}><h4>{{ p.name }}</h4><span class="val">{{ p.price }}</span><span class="cond">{{ p.detail }}</span></a></li>
+        {%- endfor %}
+      </ul>
+      <p class="note">{{ t.programs.note }}</p>
+    </div>
+  </section>
+
+  <div class="photo" style="background-image:url('images/{{ img.photo_break.file }}')" role="img" aria-label="{{ img.photo_break.alt }}"></div>
+
+  <section class="section" id="booking">
+    <div class="wrap">
+      <span class="label">{{ t.booking.label }}</span>
+      <h2 class="h2">{{ t.booking.title | lines }}</h2>
+      <p class="lead">{{ t.booking.text }}</p>
+      <ol class="steps">
+        {%- for s in t.booking.steps %}
+        <li><strong>{{ s.title }}</strong><p>{{ s.text }}</p></li>
+        {%- endfor %}
+      </ol>
+      <div class="btn-row">
+        <a class="btn btn-kakao" href="{{ kakao }}"{{ kakao_attr }}>{{ t.booking.button }}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="stays">
+    <div class="wrap split">
+      <div>
+        <span class="label">{{ t.stays.label }}</span>
+        <h2 class="h2">{{ t.stays.title | lines }}</h2>
+        <p class="lead">{{ t.stays.text }}</p>
+      </div>
+      <ul class="stay-list">
+        {%- for s in t.stays.list %}
+        <li><div><strong>{{ s.name }}</strong><span>{{ s.type }}</span></div><a href="{{ s.map }}" target="_blank" rel="noopener">{{ t.stays.map_label }}</a></li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="instructor">
+    <div class="wrap instructor">
+      <img src="images/{{ img.instructor.file }}" alt="{{ img.instructor.alt }}" loading="lazy">
+      <div>
+        <span class="label">{{ t.instructor.label }}</span>
+        <h2 class="h2">{{ t.instructor.title | lines }}</h2>
+        <p class="lead">{{ t.instructor.text }}</p>
+        <ul>
+          {%- for p in t.instructor.points %}
+          <li>{{ p }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap split">
+      <div>
+        <span class="label">{{ t.faq.label }}</span>
+        <h2 class="h2">{{ t.faq.title | lines }}</h2>
+      </div>
+      <div>
+        <div class="faq">
+          {%- for f in t.faq.list %}
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+          {%- endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <span class="label">{{ t.contact.label }}</span>
+      <h2 class="h2">{{ t.contact.title | lines }}</h2>
+      <p class="lead">{{ t.contact.text }}</p>
+      <a class="btn btn-kakao" href="{{ kakao }}"{{ kakao_attr }}>{{ t.contact.button }}</a>
+      <div class="alts">
+        <a href="{{ t.links.instagram }}" target="_blank" rel="noopener">Instagram</a>
+        <a href="{{ t.links.whatsapp }}" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:{{ t.links.email }}">이메일</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <strong>{{ t.footer.name }}</strong>
+        <p>전화 · WhatsApp <a href="tel:{{ t.links.phone | replace(' ', '') | replace('-', '') }}">{{ t.links.phone }}</a><br>
+        이메일 <a href="mailto:{{ t.links.email }}">{{ t.links.email }}</a><br>
+        픽업 지역 {{ t.footer.pickup_area }}</p>
+      </div>
+      <div class="foot-links">
+        {%- for item in t.nav['items'] %}
+        <a href="{{ item.link }}">{{ item.label }}</a>
+        {%- endfor %}
+        <a href="#stays">{{ t.footer.stays_link }}</a>
+        <a href="#contact">{{ t.nav.contact_label }}</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>{{ t.footer.copyright }}</span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-bar">
+  <a class="btn btn-line" style="color:var(--navy)" href="#programs">{{ t.mobile_bar.left }}</a>
+  <a class="btn btn-kakao" href="{{ kakao }}"{{ kakao_attr }}>{{ t.mobile_bar.right }}</a>
+</div>
+
+<script src="site.js"></script>
+</body>
+</html>
